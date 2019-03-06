@@ -1,0 +1,98 @@
+﻿@model OnlineExaminationSystem.Models.Exam
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Exam</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Attendents)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Attendents)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalMarks)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalMarks)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExamDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExamDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isOnline)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isOnline)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isCatagorized)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isCatagorized)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Categories)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Categories)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NoOfQuestion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoOfQuestion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Course.CourseName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Course.CourseName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Question.QuestionName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Question.QuestionName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Teacher.TeacherName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Teacher.TeacherName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ExamId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

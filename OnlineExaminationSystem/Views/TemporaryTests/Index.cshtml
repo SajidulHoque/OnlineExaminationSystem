@@ -1,0 +1,69 @@
+﻿@model IEnumerable<OnlineExaminationSystem.Models.TemporaryTest>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalRightAnswer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalWrongAnswer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ObtainedMark)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.isCorrect)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Exam.Attendents)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Student.StudentName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalRightAnswer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalWrongAnswer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ObtainedMark)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.isCorrect)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Exam.Attendents)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Student.StudentName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TestId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TestId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TestId })
+        </td>
+    </tr>
+}
+
+</table>
